@@ -20,7 +20,7 @@ keywords = file2set("keywords23_wou.txt")
 # extra c builtin ops(predef func of expr): sizeof
 # excluded: ?: , ++ --
 binop = set(["+", "-", "*", "/", "%",
-	".", "->",
+	".", "->", ",",
 	"<", ">", "<=", ">=", "==", "!=",
 	"<<", ">>", "&", "|", "^",
 	"&&", "||",
