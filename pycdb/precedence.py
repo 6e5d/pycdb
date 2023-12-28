@@ -1,26 +1,23 @@
 # operator are c0 style(avoid collision)
-table = [
+prectable = [
+	# 0
 	[],
 	[".", "->", "@"],
-	["*p", "&p", "-n", "+n", "~", "!", "cast", "sizeof"],
+	["*p", "&p", "-n", "+n", "~", "!", "cast", "casts", "sizeof"],
 	["*", "/", "%"],
 	["+", "-"],
+	# 5
 	["<<", ">>"],
 	["<", ">", "<=", ">="],
 	["==", "!="],
 	["&"],
 	["^"],
+	# 10
 	["|"],
 	["&&"],
 	["||"],
 	["?:"],
 	["=", "+=", "-=", "*=", "/=", "%=", "<<=", ">>=", "&=", "|=", "^="],
+	# 15
 	[","],
 ]
-
-# can also used to test if a string is a c0 op
-def opprec(op):
-	for idx, l in enumerate(table):
-		if op in l:
-			return idx
-	raise Exception(op)
