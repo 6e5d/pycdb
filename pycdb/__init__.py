@@ -55,3 +55,16 @@ def opprec(op):
 		if op in l:
 			return idx
 	return None
+
+def parse_syssyms():
+	syssyms = dict()
+	for file in (Path(__file__).parent / "syssym").iterdir():
+		ns = file.name.removesuffix(".txt")
+		for line in open(file):
+			line = line.strip()
+			if not line:
+				continue
+			syssyms[line] = ["com", "6e5d", "syslib"] +\
+				ns.split("_")
+	return syssyms
+syssyms = parse_syssyms()

@@ -1,0 +1,6 @@
+vec3
+vec4
+mat3
+mat4
+glm_mat4_identity
+glm_mat4_mul

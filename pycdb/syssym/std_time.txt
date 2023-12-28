@@ -1,0 +1,4 @@
+timespec
+clock_gettime
+CLOCK_REALTIME
+nanosleep

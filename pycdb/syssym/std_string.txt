@@ -1,0 +1,11 @@
+memcpy
+memmove
+memset
+memcmp
+strtok_r
+strcat
+strstr
+strlen
+strcpy
+strcmp
+strncpy
