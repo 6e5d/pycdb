@@ -45,8 +45,6 @@ btypes = ["size_t",
 	"uint8_t", "uint32_t", "uint64_t",
 	"int8_t", "int32_t", "int64_t",
 	"void", "int", "long", "float", "double", "char", "bool"]
-keywords = ["typedef", "if", "else", "for", "while",
-	"void", "return", "sizeof", "continue", "break", "static"]
 consts = ["NULL", "false", "true"]
 
 # can also used to test if a string is a c0 op
@@ -55,16 +53,3 @@ def opprec(op):
 		if op in l:
 			return idx
 	return None
-
-def parse_syssyms():
-	syssyms = dict()
-	for file in (Path(__file__).parent / "syssym").iterdir():
-		ns = file.name.removesuffix(".txt")
-		for line in open(file):
-			line = line.strip()
-			if not line:
-				continue
-			syssyms[line] = ["com", "6e5d", "syslib"] +\
-				ns.split("_")
-	return syssyms
-syssyms = parse_syssyms()

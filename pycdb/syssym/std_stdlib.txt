@@ -1,6 +1,0 @@
-malloc
-calloc
-realloc
-free
-abort
-exit

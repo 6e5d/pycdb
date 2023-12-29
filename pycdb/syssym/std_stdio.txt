@@ -1,8 +1,0 @@
-printf
-snprintf
-fprintf
-scanf
-sscanf
-stdin
-stdout
-stderr

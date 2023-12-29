@@ -1,4 +1,0 @@
-open
-close
-O_WRONLY
-O_RDONLY
