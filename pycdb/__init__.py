@@ -42,8 +42,8 @@ def test_identifier(s):
 	return True
 
 btypes = ["size_t",
-	"uint8_t", "uint32_t", "uint64_t",
-	"int8_t", "int32_t", "int64_t",
+	"uint8_t", "uint16_t", "uint32_t", "uint64_t",
+	"int8_t", "int16_t", "int32_t", "int64_t",
 	"void", "int", "long", "float", "double", "char", "bool"]
 consts = ["NULL", "false", "true"]
 
