@@ -9,9 +9,12 @@ def gid2file(target):
 	if target[:3] != ["com", "6e5d", "syslib"]:
 		s = gid2path(target)
 		incl = s / "build" / f"{name}.h"
+		links = [s / "build" / f"lib{name}.so"]
+		if not links[0].exists():
+			links = []
 		return (
 			[f'"{incl}"'],
-			[s / "build" / f"lib{name}.so"],
+			links,
 		)
 	links = []
 	includes = []
@@ -21,6 +24,6 @@ def gid2file(target):
 		includes = ["<" + "/".join(target[4:]) + ".h>"]
 	else:
 		d = add_sysdep(target)
-		links = d["links"]
-		includes = d["includes"]
+		links = d.get("links", [])
+		includes = d.get("includes", [])
 	return (includes, links)
